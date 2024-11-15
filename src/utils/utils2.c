@@ -1,18 +1,20 @@
 // libft içersinde kullanılan fonksiyonlar buraya atılıcak
 // sabit kullanılan variableları struc yapısına taşicaz
 // yeni textures değiştirilcek
-// 
 
 #include "../../inc/cub3D.h"
 
 size_t	ft_strlen(const char *str)
 {
-	size_t	i;
+	size_t	len;
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
+	len = 0;
+	if (str && *str)
+	{
+		while (str[len])
+			len++;
+	}
+	return (len);
 }
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
